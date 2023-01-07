@@ -44,28 +44,15 @@ const closeButton = document.querySelector('.t-close')
  const addclass= document.querySelector('.site');
   
 menuButton.addEventListener('click', function(){
-  // alert('hello')
   console.log('steph')
   addclass.classList.toggle('showmenu')
-  // console.log(addclass.classList)
 })
 
 closeButton.addEventListener('click' ,function(){
   addclass.classList.remove('showmenu')
 })
 console.log(addclass)
-// show sub menu on mobile
-const subMenu = document.querySelectorAll('.has-child .icon-small')
-subMenu.forEach((menu => menu.addEventListener('click', toggle)))
 
-
-
-function toggle(e){
-  e.preventDefault();
-  subMenu.forEach((item) => item != this ? item.closest('.has-child').classList.remove('expand') : null )
-  if (this.closest('.has-child').classList != 'expand');
-   this.closest('.has-child').classList.toggle('expand')
-}
 
 
 function copyMenu(){
@@ -86,3 +73,15 @@ function copyMenu(){
   topPlace.innerHTML= topNav.innerHTML
   }
   copyMenu()
+
+
+  // show sub menu on mobile
+const subMenu = document.querySelectorAll('.has-child .icon-small')
+subMenu.forEach((menu => menu.addEventListener('click', toggle)))
+
+function toggle(e){
+  e.preventDefault();
+  subMenu.forEach((item) => item != this ? item.closest('.has-child').classList.remove('expand') : null )
+  if (this.closest('.has-child').classList != 'expand');
+   this.closest('.has-child').classList.toggle('expand')
+}
