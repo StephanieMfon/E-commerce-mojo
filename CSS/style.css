@@ -471,7 +471,7 @@ form.search button:hover{
      transition: transform .4s, visibiltiy .4s;
     will-change:  transform, visibility;  
 }
-.showmenu{
+.showmenu .site-off{
     /* transform:translateX(0); */
     visibility: visible;
     /* transition: transform .4s 0s, visibility 0s 0s; */
@@ -480,8 +480,8 @@ form.search button:hover{
     width: var(--percentage100);
     height: var(--percentage100);
     touch-action: auto;
-    padding: 1.5em;
-}
+   padding:2em 0 0 0.5em;
+} 
 
 .off-canvas .canvas-head{
     color: white;
@@ -506,6 +506,7 @@ form.search button:hover{
 }
 .t-close{
     font-size: 1.25em;
+    margin-right: 10px;
     width: 32px;
     height: 32px;
     border-radius: var(--percentage50);

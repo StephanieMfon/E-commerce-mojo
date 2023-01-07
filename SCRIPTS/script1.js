@@ -36,41 +36,23 @@ window.addEventListener('load', function(){
 
 // copy menu for mobile
 
-function copyMenu(){
-// copy inside dpt.cat to departments
-const dptCategory= document.querySelector('.dpt-cat')
-const dptPlace = document.querySelector('.departments')
-dptPlace.innerHTML = dptCategory.innerHTML;
-
-// copy inside nav to nav
-const mainNav = document.querySelector('.header-nav nav')
-const navPlace = document.querySelector('.off-canvas nav')
-navPlace.innerHTML = mainNav.innerHTML
-
-// copy header-top wrapper to thetopnav
-
-const topNav = document.querySelector('.header-top')
-const topPlace = document.querySelector('.off-canvas  .thetop-nav')
-topPlace.innerHTML= topNav.innerHTML
-}
-copyMenu()
-
 
 // show mobile menu
 
 const menuButton = document.querySelector('.trigger')
 const closeButton = document.querySelector('.t-close')
- const addclass= document.querySelector('.site-off');
+ const addclass= document.querySelector('.site');
   
 menuButton.addEventListener('click', function(){
-  // addclass.classList.toggle('showmenu')
-  addclass.style.visibility = 'visible'
-
-  console.log(addclass.classList)
+  // alert('hello')
+  console.log('steph')
+  addclass.classList.toggle('showmenu')
+  // console.log(addclass.classList)
 })
-// closeButton.addEventListener('click' ,function(){
-//   addclass.classList.remove('showmenu')
-// })
+
+closeButton.addEventListener('click' ,function(){
+  addclass.classList.remove('showmenu')
+})
 console.log(addclass)
 // show sub menu on mobile
 const subMenu = document.querySelectorAll('.has-child .icon-small')
@@ -85,3 +67,22 @@ function toggle(e){
    this.closest('.has-child').classList.toggle('expand')
 }
 
+
+function copyMenu(){
+  // copy inside dpt.cat to departments
+  const dptCategory= document.querySelector('.dpt-cat')
+  const dptPlace = document.querySelector('.departments')
+  dptPlace.innerHTML = dptCategory.innerHTML;
+  
+  // copy inside nav to nav
+  const mainNav = document.querySelector('.header-nav nav')
+  const navPlace = document.querySelector('.off-canvas nav')
+  navPlace.innerHTML = mainNav.innerHTML
+  
+  // copy header-top wrapper to thetopnav
+  
+  const topNav = document.querySelector('.header-top')
+  const topPlace = document.querySelector('.off-canvas  .thetop-nav')
+  topPlace.innerHTML= topNav.innerHTML
+  }
+  copyMenu()
