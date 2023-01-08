@@ -85,3 +85,39 @@ function toggle(e){
   if (this.closest('.has-child').classList != 'expand');
    this.closest('.has-child').classList.toggle('expand')
 }
+
+// ======automatic slideshow
+let index = 0;
+const slides = document.querySelectorAll(".slides");
+const dots = document.querySelectorAll(".dot");
+
+function changeSlide(){
+
+  number = slides.length - 1
+
+  if(index < 0){
+    index = number;
+  }
+  
+  if(index > number){
+    index = 0;
+  }
+  
+  for(let slide of slides){
+    slide.style.display = "none";
+  }
+  for(let dot of dots){
+    dot.classList.remove("active");
+  }
+  slides[index].style.display= "block";
+  dots[index].classList.add("active");
+  
+  index++;
+  
+  setTimeout(changeSlide,4000);
+  
+}
+
+changeSlide();
+
+
